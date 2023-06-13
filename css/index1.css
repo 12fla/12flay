@@ -1,0 +1,268 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+}
+/* 网页背景 */
+body {
+    margin: 0 auto;
+    min-width: 1200px;
+    max-width: 2000px;
+    background-image: url(../imgs/130015-14944788158363.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment:fixed;
+}
+.main {
+    width:100%;
+}
+.sider {
+    position: fixed;
+    width: 80px;
+    height: 240px;
+    top: 60%;
+    right: 10px;
+    background-color: #aa9bdc;
+    z-index: 1000;
+}
+.sider a {
+    text-decoration: none;
+}
+.sider i {
+    color: #6a356b;
+    font-size: 40px;
+    margin-left: 15px;
+    line-height: 80px;
+}
+.sider i:hover {
+    color: #9d52db;
+}
+.sider i:visited {
+    color: #db9bdc;
+}
+/* 头部导航栏制作 */
+.header {
+    float: top;
+    position: relative;
+    height: 120px;
+    background-color: #181427;
+    color: azure;
+    /* z-index只有在定位值为absolutive relative fixed的元素上有效 */
+    z-index: 100;
+}
+/* 额外标签法清除浮动 */
+.float_clear {
+    clear: both;
+}
+.project {
+    display: flex;
+}
+.project>li {
+    top: 0;
+    float: left;
+    width: 300px;
+    line-height: 120px;
+    text-align: center;
+}
+/* 悬停时背景变色 */
+.project>li:hover {
+    background-color:  #7864c1b0;
+}
+.project li ul {
+    /* 隐藏 */
+    display: none;
+}
+.project li:hover ul {
+    /* 子绝父相——父 */
+    position: relative;
+    /* 显示 */
+    display: block;
+    background-color: #181427;
+}
+.project li:hover ul li:hover {
+    background-color:  #7864c1b0;
+}
+.project li:hover ul li ul {
+    display: none;
+}
+.project li:hover ul li:hover ul {
+    /* 子绝父相——子 */
+    position: absolute;
+    display: block;
+    width: 150px;
+    /* 不能写死 否则窗口变动时会有脱离二级菜单栏情况 */
+    left: 100%;
+    /* 让三级菜单栏不脱离主体 */
+    margin-top: -35%;
+    border-radius: 20px;
+}
+.project li:hover ul li:hover ul li:hover {
+    border-radius: 20px;
+}
+.project a {
+    text-decoration: none;
+    color: azure;
+}
+.project a:hover {
+    color: #40184ab0;
+}
+/* 引入字体图标 */
+/* 字体图标应放在菜单栏之前 否则会掉落 */
+.header i  {
+    color: aliceblue;
+    float: right;
+    margin-right: 20px;
+    font-size: 70px;
+    line-height: 100px;
+}
+.header i:hover {
+    color: #52438a;
+}
+/* 头部导航栏制作完成 */
+/* 过渡部分制作 */
+.slider {
+    margin-top: 60px;
+    margin-bottom: 100px;
+    display: flex;
+    justify-content: center;
+}
+.swipe {
+    position: relative;
+    width: 600px;
+    height: 400px;
+    text-align: center;
+    color: #fff;
+    overflow: hidden;
+}
+.swipe ul {
+    margin: 10px 0;
+    padding: 0;
+    width: 1600px;
+    transition: .5s;
+}
+.swipe li {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: inline-block;
+    text-align: center;
+    width: 600px;
+    height: 400px;
+    list-style: none;
+    font-size: 50px;
+    transition: .5s transform ease-in-out;
+}
+.li1:nth-of-type(2) {
+    left: 100%;
+}
+.li1:nth-of-type(3) {
+    left: 200%;
+}
+.li1 img {
+    width: 600px;
+    height: 400px;
+    border-radius: 50px;
+}
+input[type="radio"] {
+    position: relative;
+    display: none;
+}
+.labelfather {
+    position: absolute;
+    width: 100%;
+    bottom: 5px;
+    text-align: center;
+    z-index: 10;
+}
+.labelfather label {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #fff;
+    margin: 0 8px;
+}
+.swipe input[type="radio"]:nth-of-type(1):checked ~ .labelfather label:nth-of-type(1) {
+    background-color: rgba(82, 45, 107, 0.66);
+}
+.swipe input[type="radio"]:nth-of-type(2):checked ~ .labelfather label:nth-of-type(2) {
+    background-color: rgba(86, 45, 107, 0.621);
+}
+.swipe input[type="radio"]:nth-of-type(3):checked ~ .labelfather label:nth-of-type(3) {
+    background-color: rgba(94, 45, 107, 0.66);
+}
+.swipe input[type="radio"]:nth-of-type(1):checked ~ ul {
+    transform: translateX(0%);
+}
+.swipe input[type="radio"]:nth-of-type(2):checked ~ ul {
+    transform: translateX(-100%);
+}
+.swipe input[type="radio"]:nth-of-type(3):checked ~ ul {
+    transform: translateX(-200%);
+}
+/* 主体部分创作 */
+.maincontent {
+    position: relative;
+    margin: 0 auto;
+    width: 1240px;
+}
+.foodtitle {
+    width: 100%;
+    height: 60px;
+    margin-left: 3px;
+    font-size: 40px;
+    /* 斜体 */
+    font-style: italic;
+    text-align: center;
+    line-height: 60px;
+    margin-bottom: 20px;
+    background-color: #1d1427;
+}
+.foodlist {
+    position: relative;
+    width: 1240px;
+    height: 630px;
+    background-color: #474071be;
+    margin-right:auto;
+    margin-left: auto;
+    margin-bottom: 60px;
+    padding: 0;
+}
+.foodlist td {
+    width: 300px;
+    height: 100px;
+}
+.box1 {
+    width: 100%;
+    height: 100%;
+}
+.box2 {
+    width: 300px;
+    height: 222px;
+}
+.box1 img {
+    width: 100%;
+    height: 100%;
+}
+.box2 img {
+    width: 100%;
+    height: 100%;
+}
+/* 因为单元格与图片盒子有相同类名，会产生双层效果 */
+.box1:hover , .box2:hover {
+    box-shadow: 0 0 10px #181427;
+    transform: translateY(-15px);
+    transition: all .5s;
+}
+.amusement_title {
+    width: 100%;
+    height: 60px;
+    margin-left: 3px;
+    font-size: 40px;
+    font-style: italic;
+    text-align: center;
+    line-height: 60px;
+    margin-bottom: 20px;
+    background-color: #1d1427;
+}

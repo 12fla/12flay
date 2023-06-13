@@ -1,0 +1,317 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    min-width: 1200px;
+    max-width: 2000px;
+    box-sizing: border-box;
+    margin: 0 auto;
+    background-image: url(../imgs/美食版块背景1.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+}
+/* 粘性布局尝试 */
+.top {
+    position: sticky;
+    top: 0;
+    height: 80px;
+    color: #f7ddbb;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 30px;
+    background-color: #181427;
+}
+/* 弹性布局以让每个选项并排显示 */
+.topul {
+    list-style: none;
+    display: flex;
+}
+.topul li {
+    float: left;
+    width: 300px;
+    height: 80px;
+    text-align: center;
+    font-weight: 900;
+    line-height: 80px;
+}
+.topul li a {
+    text-decoration: none;
+    color: #f3debf;
+}
+.topul li a:hover {
+    font-size: 50px;
+    color: #f3debf;
+    transition: all .5s;
+}
+.topul li:hover {
+    color: #8e2421;
+}
+.clear_box {
+    clear: both;
+}
+.Chongqing {
+    color: #f3debf;
+    font-size: 40px;
+    font-family: 'Courier New', Courier, monospace;
+    border-radius: 30px;
+    line-height: 90px;
+    text-align: center;
+    /* 相对布局让其居中 */
+    position: relative;
+    left: 50%;
+    margin-left: -500px;
+    margin-top:160px;
+    width: 1000px;
+    height: 90px;
+    background-color: #1a334e;
+}
+.box1 {
+    /* left: 50%;
+    margin-left: -465px; */
+    margin: 0 auto;
+    width: 940px;
+    background-color: #1a334e;
+    margin-bottom: 60px;
+}
+/* 美食图片展示 */
+.box1 table {
+    margin-top: 40px;
+}
+.box1 table td {
+    width: 300px;
+    height: 300px;
+}
+.box1 td:hover {
+    border-radius: 30px;
+    transform: scale(.9);
+    transition: all .8s;
+}
+.box1 td img:hover {
+    border-radius: 30px;
+    transform: scale(.9);
+    transition: all .8s;
+}
+.box1 table td img {
+    width: 300px;
+    height: 300px;
+}
+/* 背景图片做法 填满四个角 */
+.box1 table tr .top1 {
+    background-image: url(../imgs/重庆美食1.jpg);
+    background-size: cover;
+}
+.box1 table tr .top2 {
+    background-image: url(../imgs/重庆美食3.jpg);
+    background-size: cover;
+}
+.box1 table tr .top3 {
+    background-image: url(../imgs/重庆美食7.jpg);
+    background-size: cover;
+}
+.box1 table tr .top4 {
+    background-image: url(../imgs/重庆美食8.jpg);
+    background-size: cover;
+}
+/* 侧边栏 */
+.left_sider {
+    position: fixed;
+    margin-left: 10px;
+    margin-top: 200px;
+    width: 200px;
+    height: 400px;
+    background-color: #1a334e;
+    backdrop-filter: blur(10px);
+    text-align: center;
+}
+.left_sider a {
+    font-family: 'Courier New', Courier, monospace;
+    text-decoration: none;
+    color: #efdfc2;
+    font-size: 20px;
+    line-height: 400px;
+}
+.left_sider a:hover {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 50px;
+    transition: all .8s;
+}
+.right_sider {
+    /* 使用固定定位使盒子居于版心右侧的方法 */
+    position: fixed;
+    left: 50%;
+    margin-top: 200px;
+    margin-left: 630px;
+    width: 200px;
+    height: 400px;
+    background-color: #1a334e;
+    backdrop-filter: blur(20px);
+    text-align: center;
+}
+.right_sider a {
+    color: #f3debf;
+    line-height: 400px;
+    font-size: 90px;
+    text-decoration: none;
+}
+.right_sider a i {
+    font-size: 90px;
+    text-decoration: none;
+}
+.right_sider a:hover {
+    font-size: 110px;
+}
+/* 美食介绍——重庆 */
+.discribe_CQ {
+    border-radius: 10px;
+    font-weight: 900;
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0 auto;
+    width: 940px;
+    height: 100px;
+    color: #f7ddbb;
+    background-color: #1a334eab;
+    margin-bottom: 20px;
+}
+.ningbo {
+    color: #f3debf;
+    font-size: 40px;
+    font-family: 'Courier New', Courier, monospace;
+    border-radius: 30px;
+    line-height: 90px;
+    text-align: center;
+    /* 相对布局让其居中 */
+    position: relative;
+    left: 50%;
+    margin-left: -500px;
+    margin-top: 60px;
+    margin-bottom: 20px;
+    width: 1000px;
+    height: 90px;
+    background-color: #1a334e;
+}
+.box2 {
+    /* left: 50%;
+    margin-left: -465px; */
+    margin: 0 auto;
+    width: 940px;
+    background-color: #0b2850e4;
+    margin-bottom: 60px;
+    
+}
+.box2 table {
+    margin-top: 40px;
+}
+.box2 table td {
+    background-color: #fff;
+    width: 300px;
+    height: 300px;
+}
+.box2 table td:hover {
+    box-shadow: #f3debf 0px 0px 10px;
+}
+.box2_1 {
+    background-image: url(../imgs/宁波美食6.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.box2_2 {
+    background-image: url(../imgs/宁波美食1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.box2_3 {
+    background-image: url(../imgs/宁波美食8.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.box2_4 {
+    background-image: url(../imgs/宁波美食3.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.box2_5 {
+    background-image: url(../imgs/宁波美食5.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.discribe_NB {
+    border-radius: 10px;
+    font-weight: 900;
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0 auto;
+    width: 940px;
+    height: 80px;
+    color: #f7ddbb;
+    background-color: #1a334eb5;
+    margin-bottom: 20px;
+}
+.Guizhou {
+    color: #f3debf;
+    font-size: 40px;
+    font-family: 'Courier New', Courier, monospace;
+    border-radius: 30px;
+    line-height: 90px;
+    text-align: center;
+    /* 相对布局让其居中 */
+    position: relative;
+    left: 50%;
+    margin-left: -500px;
+    margin-top: 60px;
+    margin-bottom: 20px;
+    width: 1000px;
+    height: 90px;
+    background-color: #1a334e;
+}
+.box3 {
+    /* left: 50%;
+    margin-left: -465px; */
+    margin: 0 auto;
+    width: 940px;
+    background-color: #0b2850e4;
+    margin-bottom: 60px;
+    height: 620px;
+}
+.box3 td {
+    width: 300px;
+    height: 600px;
+    background-color: #fff;
+}
+.box3 .box3_1 {
+    background-image: url(../imgs/贵州美食1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.box3 .box3_2 {
+    background-image: url(../imgs/贵州美食2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.box3 .box3_3 {
+    background-image: url(../imgs/贵州美食3.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.box3 td:hover {
+    box-shadow: 0 0 10px #181427;
+    transform: translateY(-15px);
+    transition: all .5s;
+}
+.discribe_GZ {
+    border-radius: 10px;
+    font-weight: 900;
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0 auto;
+    width: 940px;
+    height: 80px;
+    color: #f7ddbb;
+    background-color: #1a334eb5;
+    margin-bottom: 20px;
+}
+.bottom {
+    margin-top: 60px;
+    text-align: center;
+    color: #efdfc2;
+    border-top: 5px solid #efdfc2;
+    height: 150px;
+    background-color: #181427;
+}

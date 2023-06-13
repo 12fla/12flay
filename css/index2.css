@@ -1,0 +1,222 @@
+/* 娱乐精选版块制作 */
+.amusementlist {
+    width: 100%;
+    height: 600px;
+    background-color: #4e497c;
+    margin: 0 auto;
+    margin-bottom: 60px;
+}
+.amusementlist img {
+    width: 297px;
+    height: 297px;
+    transition: all .8s;
+}
+.amusementlist img:hover {
+    /* 图片放大效果 */
+    transform: scale(1.4);
+}
+.amusementlist .box {
+    position: relative;
+    width: 297px;
+    height: 100%;
+    /* 隐藏多余遮罩层 */
+    overflow: hidden;
+}
+/* 遮罩效果 */
+.mask {
+    position: absolute;
+    /* 保留上方空隙 */
+    top: 20%;
+    width: 100%;
+    height: 100%;
+    background-color: #2f0f4dba;
+    /* 透明 */
+    opacity: 0;
+    pointer-events: none;
+}
+.box:hover .mask {
+    /* 显示 */
+    opacity: 1;
+    transition: opacity .8s;
+    /* Firefox 4 */
+    -moz-transition: opacity .8s;
+    /* Safari & Chrome */
+    -webkit-transition: opacity .8s;
+    /* Opera */
+    -o-transition: opacity .8s;
+}
+.mask p {
+    margin-top: 30px;
+    text-indent: 10px;
+    font-family: 'Courier New', Courier, monospace;
+    color: aliceblue;
+    -webkit-line-clamp: 2;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsiss;
+}
+.box .flag {
+    /* 将标签置于最上层 */
+    position:absolute;
+    z-index: 100;
+    width: 0;
+    height: 0;
+    border: 30px solid #FF6600;
+    border-top-width: 30px;
+    /* 让最下面三角形消失 */
+    border-bottom-color: transparent;
+    border-bottom-width: 30px;
+}
+/* 娱乐精选版块制作完成 */
+/* 制作出行方式展示板块 */
+.TripMode_title {
+    width: 100%;
+    height: 60px;
+    margin-left: 3px;
+    font-size: 40px;
+    font-style: italic;
+    text-align: center;
+    line-height: 60px;
+    margin-bottom: 20px;
+    background-color: #1d1427;
+}
+#transbox {
+    float: left;
+    margin-bottom: 60px;
+}
+#transbox>div {
+    display: inline-block;
+}
+#transbox {
+    /* 弹性布局+居中 */
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 490px;
+    background-color: #4d4979;
+}
+.norbox {
+    width: 190px;
+    height: 490px;
+}
+.picbox {
+    position: relative;
+    margin: 20px auto;
+    width: 800px;
+    height: 450px;
+    overflow: hidden;
+}
+#transbox ul {
+    width: 500%;
+    animation: s 18s 3s infinite;
+}
+.picbox li {
+    float: left;
+    width: 800px;
+    list-style: none;
+}
+#transbox ul li img {
+    width: 100%;
+    height: 100%;
+}
+@keyframes s {
+    /* 时间为4份 因为返回第一张的时间为最后一张的停留时间 */
+    /* 比例为5分 因为总共五张图片 */
+    0%,
+    25% {
+        transform: translateX(-20%);
+    }
+    25%,
+    50% {
+        transform: translateX(-40%);
+    }
+    50%,
+    75% {
+        transform: translateX(-60%);
+    }
+    75%,
+    100% {
+        transform: translateX(-80%);
+    }
+}
+.norbox {
+    position: relative;
+    perspective: 500px;
+    transition: all 2s;
+    transform-style: preserve-3d;
+}
+.norbox:hover {
+    transform: rotateY(180deg);
+}
+.font1, .back1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+.font1 {
+    background-image: url(../imgs/出行6.jpg);
+    background-size: cover;
+}
+.back1 {
+    background-image: url(../imgs/出行_侧边栏1.jpg);
+    background-size: cover;
+}
+.back1 {
+    transform: rotateY(180deg);
+}
+/* 重复过程 */
+.font2, .back2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+.font2 {
+    background-image: url(../imgs/出行_侧边栏2.jpg);
+    background-size: cover;
+}
+.back2 {
+    background-image: url(../imgs/出行_侧边栏3.jpg);
+    background-size: cover;
+}
+.back2 {
+    transform: rotateY(180deg);
+}
+/* 出行方式板块制作完成 */
+/* 制作详情底页 */
+.morechose {
+    position: relative;
+    color: #cdb5e2;
+    height: 300px;
+    background-color: #171426;
+    border-top: 2px solid #cdb5e2;
+}
+.listbox {
+    margin-top: 50px;
+    margin-left: 60px;
+}
+.listbox ul li {
+    display: block;
+    margin-top: 20px;
+}
+.morechose .listbox ul a {
+    margin-left: 40px;
+    color: aliceblue;
+    text-decoration: none ;
+}
+.listbox ul a:hover {
+    color: #cdb5e2;
+}
+.listbox i  {
+    position: absolute;
+    color: aliceblue;
+    top: 40px;
+    left: 23px;
+    font-size: 40px;
+}

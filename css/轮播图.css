@@ -1,0 +1,87 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    height: 100vh;
+    /* 居中 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ecdada;
+}
+.swipe {
+    position: relative;
+    width: 800px;
+    height: 500px;
+    text-align: center;
+    color: #fff;
+    overflow: hidden;
+}
+.swipe ul {
+    margin: 10px 0;
+    padding: 0;
+    width: 1600px;
+    transition: .5s;
+}
+.swipe li {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: inline-block;
+    width: 800px;
+    height: 500px;
+    list-style: none;
+    line-height: 500px;
+    font-size: 50px;
+    transition: .5s transform ease-in-out;
+}
+.li1:nth-of-type(2) {
+    left: 100%;
+}
+.li1:nth-of-type(3) {
+    left: 200%;
+}
+img {
+    width: 800px;
+    height: 500px;
+    border-radius: 50px;
+}
+input[type="radio"] {
+    position: relative;
+    z-index: 100;
+    display: none;
+}
+.labelfather {
+    position: absolute;
+    width: 100%;
+    bottom: 12px;
+    text-align: center;
+    z-index: 1000;
+}
+.labelfather label {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #fff;
+    margin: 0 10px;
+}
+.swipe input[type="radio"]:nth-of-type(1):checked ~ .labelfather label:nth-of-type(1) {
+    background-color: rgba(45, 107, 107, 0.66);
+}
+.swipe input[type="radio"]:nth-of-type(2):checked ~ .labelfather label:nth-of-type(2) {
+    background-color: rgba(45, 107, 107, 0.621);
+}
+.swipe input[type="radio"]:nth-of-type(3):checked ~ .labelfather label:nth-of-type(3) {
+    background-color: rgba(45, 107, 107, 0.66);
+}
+.swipe input[type="radio"]:nth-of-type(1):checked ~ ul {
+    transform: translateX(0%);
+}
+.swipe input[type="radio"]:nth-of-type(2):checked ~ ul {
+    transform: translateX(-100%);
+}
+.swipe input[type="radio"]:nth-of-type(3):checked ~ ul {
+    transform: translateX(-200%);
+}
