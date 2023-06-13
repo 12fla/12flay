@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/注册页面.css">
+    <link rel="stylesheet" href="../font/font_4021545_1abf267dj9y/iconfont.css">
+    <title>注册页面</title>
+</head>
+<body>
+    <div class="register">
+        <div class="sider">
+            <a href="./登录页面.html"><i class="iconfont icon-denglu"></i></a>
+            <a href="../index.html"><i class="iconfont icon-guanbi"></i></a>
+        </div>
+        <div class="register1">
+            <form action="#">
+                <table cellspacing="10px">
+                    <tr class="age">
+                        <td>
+                            <i class="iconfont icon-ziyuan48"></i>
+                            年龄
+                        </td>
+                        <td>
+                            <select name="age" id="ageselect">
+                                <option>---请选择---</option>
+                                <option value="16">16</option>
+                                <option value="17">17</option>
+                                <option value="18">18</option>
+                                <option value="19">19</option>
+                                <option value="20">20</option>
+                                <option value="21">21</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr class="mailbox">
+                        <td>
+                            <i class="iconfont icon-ziyuan57"></i>
+                            邮箱
+                        </td>
+                        <td id="mailinput">
+                            <input type="text" name="mail" value="  mailname">
+                        </td>
+                    </tr>
+                    <tr class="position">
+                        <td>
+                            <i class="iconfont icon-ziyuan49"></i>
+                            居住城市
+                        </td>
+                        <td>
+                            <select name="position" id="positionbox">
+                                <option>---请选择---</option>
+                                <option value="上海">上海</option>
+                                <option value="北京">北京</option>
+                                <option value="成都">成都</option>
+                                <option value="武汉">武汉</option>
+                                <option value="纽约">纽约</option>
+                                <option value="伦敦">伦敦</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr class="hobby">
+                        <td>
+                            <i class="iconfont icon-ziyuan25"></i>
+                            爱好
+                        </td>
+                        <td class="hobbychose">
+                            <input type="checkbox" name="hobby" value="enjoy_food" checked>吃饭
+                            <input type="checkbox" name="hobby" value="enjoy_sleep">睡觉
+                            <input type="checkbox" name="hobby" value="enjoy_paly">打豆豆
+                            <input type="checkbox" name="hobby" value="enjoy_sports">运动
+    
+                        </td>
+                    </tr>
+                    <tr class="useraction">
+                        <td>
+                            <input type="submit" name="submitbutten" value="提交注册信息">
+                        </td>
+                        <td>
+                            <input type="reset" name="resetbutten" value="重置注册信息">
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
